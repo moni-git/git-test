@@ -1,0 +1,11 @@
+---
+# command module
+- name: run task
+  hosts: control
+  tasks:
+    - name: run multiple commands
+      command: "{{ item }}"
+      loop:
+        - touch /tmp/test_file
+        - mkdir /tmp/test_dir
+        - mv /tmp/test_file /tmp/test_dir

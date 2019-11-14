@@ -1,0 +1,7 @@
+---
+# command module
+- name: run task
+  hosts: control
+  tasks:
+    - name: ensure file exists
+      command: touch /tmp/test_file

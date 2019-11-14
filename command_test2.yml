@@ -1,0 +1,14 @@
+---
+#command module
+- name: run task
+  hosts: control
+  tasks:
+    - name: ensure directory exists
+      file:
+        path: /tmp/test_dir
+        state: directory
+          
+    - name: ensure file exists
+      command: touch test_file2
+      args:
+        chdir: /tmp/test_dir

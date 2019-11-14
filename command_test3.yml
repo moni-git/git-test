@@ -1,0 +1,10 @@
+---
+#command module
+- name: run task
+  hosts: control
+  tasks:
+    - name: ensure file exists
+      command: touch $TARGET_DIR/$FILENAME
+      environment:
+        TARGET_DIR: /tmp
+        FILENAME: test_file3
