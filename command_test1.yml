@@ -3,5 +3,5 @@
 - name: run task
   hosts: control
   tasks:
-    - name: ensure file exists
+    - name: ensure file exists again
       command: touch /tmp/test_file
